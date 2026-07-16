@@ -156,6 +156,82 @@ section { padding: 100px 0; scroll-margin-top: 70px; }
 
 .nav-controls { display: flex; align-items: center; gap: 10px; flex-shrink: 0; }
 
+.nav-search-wrapper { position: relative; display: flex; align-items: center; }
+.nav-search-box { width: 180px; margin-bottom: 0; position: relative; }
+.nav-search-results {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    margin-top: 8px;
+    width: 250px;
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    z-index: 1000;
+    max-height: 350px;
+    overflow-y: auto;
+    display: none;
+    flex-direction: column;
+}
+.nav-search-results.active {
+    display: flex;
+}
+.search-result-item {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 12px;
+    border-bottom: 1px solid var(--border);
+    color: var(--text);
+    text-decoration: none;
+    transition: background 0.2s;
+}
+.search-result-item:last-child {
+    border-bottom: none;
+}
+.search-result-item:hover {
+    background: rgba(59,130,246,0.1);
+}
+.search-result-title {
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+.search-result-type {
+    font-size: 0.75rem;
+    color: var(--text-3);
+    margin-top: 4px;
+}
+.search-no-results {
+    padding: 12px;
+    color: var(--text-3);
+    font-size: 0.85rem;
+    text-align: center;
+}
+.nav-search-box input { 
+    width: 100%; 
+    padding: 8px 12px 8px 36px; 
+    border-radius: 20px; 
+    border: 1px solid var(--border); 
+    background: var(--bg-alt); 
+    color: var(--text); 
+    font-size: 0.9rem;
+    transition: all 0.3s;
+}
+.nav-search-box input:focus {
+    border-color: var(--blue-light);
+    box-shadow: 0 0 0 2px rgba(59,130,246,0.2);
+    outline: none;
+}
+.nav-search-box .search-icon {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-3);
+    display: flex;
+    align-items: center;
+}
+
 .control-btn {
     background: none;
     border: 1px solid var(--border);
@@ -1131,6 +1207,8 @@ footer {
         padding: 16px;
         z-index: 999;
     }
+    
+    .nav-search-box { width: 130px; }
 
     .hero-content { grid-template-columns: 1fr; gap: 50px; text-align: center; }
     .hero-visual { order: -1; }

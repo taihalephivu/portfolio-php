@@ -46,6 +46,7 @@ elseif (preg_match('#^/blog/(.+)$#', $path, $m)) {
 elseif ($path === '/cv') {
     (new PortfolioController($lang))->cv();
 }
+
 elseif ($path === '/admin/login') {
     (new AdminController($lang))->login();
 }

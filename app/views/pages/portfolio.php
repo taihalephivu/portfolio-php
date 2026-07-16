@@ -62,13 +62,6 @@
         <section id="projects">
             <div class="section-header">
                 <h2 class="section-title"><?php echo htmlspecialchars($t['projects_title']); ?></h2>
-                <div class="search-box">
-                    <span class="search-icon">🔍</span>
-                    <input id="project-search"
-                           type="text"
-                           placeholder="<?php echo htmlspecialchars($t['search_ph']); ?>"
-                           autocomplete="off">
-                </div>
             </div>
 
             <div class="projects-grid" id="projects-container">

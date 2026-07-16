@@ -22,7 +22,7 @@ return [
     'view_demo'       => 'Live Demo',
     'view_repo'       => 'Source Code',
     'view_all'        => 'View all →',
-    'search_ph'       => 'Search projects...',
+    'search_ph'       => 'Search...',
     // Blog
     'read_more'       => 'Read Article',
     'back_to_blog'    => '← Back to Blog',

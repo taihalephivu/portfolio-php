@@ -135,7 +135,6 @@ $experiences = $profile['experiences'][$l] ?? [];
 <section id="experience" style="background: var(--bg-alt);">
     <div class="container">
         <div class="section-header reveal">
-            <div class="section-tag"><?php echo $l === 'vi' ? 'Lịch sử' : 'Timeline'; ?></div>
             <h2 class="section-title"><?php echo $t['exp_title']; ?></h2>
         </div>
         <div class="timeline-wrapper">
@@ -167,14 +166,7 @@ $experiences = $profile['experiences'][$l] ?? [];
     <div class="container">
         <div class="projects-header reveal">
             <div>
-                <div class="section-tag"><?php echo $l === 'vi' ? 'Portfolio' : 'Portfolio'; ?></div>
                 <h2 class="section-title"><?php echo $t['projects_title']; ?></h2>
-            </div>
-            <div class="search-box">
-                <span class="search-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-                </span>
-                <input id="project-search" type="text" placeholder="<?php echo htmlspecialchars($t['search_ph']); ?>" autocomplete="off">
             </div>
         </div>
         <div class="projects-grid" id="projects-grid">
@@ -217,7 +209,6 @@ $experiences = $profile['experiences'][$l] ?? [];
     <div class="container">
         <div class="section-header reveal" style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:16px;margin-bottom:40px;">
             <div>
-                <div class="section-tag">Blog</div>
                 <h2 class="section-title"><?php echo $t['blog_title']; ?></h2>
             </div>
             <a href="<?php echo $base; ?>/blog" class="btn btn-outline"><?php echo $t['view_all']; ?></a>
@@ -257,7 +248,6 @@ $experiences = $profile['experiences'][$l] ?? [];
     <div class="container">
         <div class="contact-grid reveal">
             <div class="contact-info">
-                <div class="section-tag"><?php echo $l === 'vi' ? 'Liên hệ' : 'Contact'; ?></div>
                 <h2 class="section-title"><?php echo $t['contact_title']; ?> <span class="accent">Hưng</span></h2>
                 <p><?php echo $t['contact_desc']; ?></p>
                 <a href="mailto:<?php echo htmlspecialchars($profile['email'] ?? ''); ?>" class="contact-email" id="contact-email-link">

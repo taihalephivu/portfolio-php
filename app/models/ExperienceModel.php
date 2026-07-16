@@ -10,7 +10,7 @@ class ExperienceModel
         'vi' => [
             [
                 'title'   => 'Cử nhân CNTT',
-                'company' => 'Đại học Công nghệ',
+                'company' => 'Đại học Giao Thông Vận Tải',
                 'period'  => '2019 - 2023',
                 'type'    => 'education',
                 'desc'    => 'Tốt nghiệp loại Giỏi chuyên ngành Kỹ thuật Phần mềm. Tham gia nhiều câu lạc bộ học thuật và cuộc thi lập trình.',

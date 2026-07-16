@@ -129,33 +129,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     document.querySelectorAll('.progress-fill').forEach(bar => progressObserver.observe(bar));
 
-    // ─────────────────────────────────────────────────────────────────────────
-    // 6. PROJECT SEARCH FILTER
-    // ─────────────────────────────────────────────────────────────────────────
-    const searchInput   = document.getElementById('project-search');
-    const noResults     = document.getElementById('no-results');
-    const projectItems  = document.querySelectorAll('.project-item');
-
-    searchInput?.addEventListener('input', () => {
-        const query = searchInput.value.trim().toLowerCase();
-        let visible = 0;
-
-        projectItems.forEach(item => {
-            const name = item.querySelector('.project-name')?.textContent.toLowerCase() || '';
-            const desc = item.querySelector('.project-desc')?.textContent.toLowerCase() || '';
-            const tags = [...item.querySelectorAll('.tag')].map(t => t.textContent.toLowerCase());
-
-            const match = !query
-                || name.includes(query)
-                || desc.includes(query)
-                || tags.some(t => t.includes(query));
-
-            item.style.display = match ? '' : 'none';
-            if (match) visible++;
-        });
-
-        if (noResults) noResults.style.display = visible === 0 ? 'block' : 'none';
-    });
 
     // ─────────────────────────────────────────────────────────────────────────
     // 7. CHAT WIDGET
@@ -285,6 +258,92 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
         setTimeout(typeWriter, 500); // Start after fadeUp animation
+    }
+
+    // ─────────────────────────────────────────────────────────────────────────
+    // 11. NAV GLOBAL SEARCH
+    // ─────────────────────────────────────────────────────────────────────────
+    const navSearchInput = document.getElementById('nav-search-input');
+    const navSearchResults = document.getElementById('nav-search-results');
+    
+    if (navSearchInput && navSearchResults) {
+        let debounceTimer;
+        
+        navSearchInput.addEventListener('input', (e) => {
+            clearTimeout(debounceTimer);
+            const query = e.target.value.trim();
+            
+            if (query.length === 0) {
+                navSearchResults.classList.remove('active');
+                navSearchResults.innerHTML = '';
+                return;
+            }
+            
+            debounceTimer = setTimeout(() => {
+                fetch(`${_baseUrl}/api/search?q=${encodeURIComponent(query)}`)
+                    .then(res => res.json())
+                    .then(data => {
+                        navSearchResults.innerHTML = '';
+                        navSearchResults.classList.add('active');
+                        
+                        let total = (data.projects?.length || 0) + (data.posts?.length || 0) + (data.others?.length || 0);
+                        
+                        if (total === 0) {
+                            navSearchResults.innerHTML = '<div class="search-no-results">Không tìm thấy kết quả.</div>';
+                            return;
+                        }
+                        
+                        const renderItem = (item) => {
+                            let typeLabel = '';
+                            if (item.type === 'project') typeLabel = 'Dự án';
+                            else if (item.type === 'post') typeLabel = 'Bài viết';
+                            else if (item.type === 'section') typeLabel = 'Mục trang';
+                            else if (item.type === 'skill') typeLabel = 'Kỹ năng';
+                            else if (item.type === 'experience') typeLabel = 'Kinh nghiệm';
+                            
+                            let url = item.url;
+                            if (url.startsWith('/')) {
+                                url = _baseUrl + url;
+                            }
+
+                            return `
+                            <a href="${url}" class="search-result-item">
+                                <span class="search-result-title">${escHtml(item.title)}</span>
+                                <span class="search-result-type">${typeLabel}</span>
+                            </a>
+                            `;
+                        };
+                        
+                        let html = '';
+                        if (data.others?.length) {
+                            data.others.forEach(p => { html += renderItem(p); });
+                        }
+                        if (data.projects?.length) {
+                            data.projects.forEach(p => { html += renderItem(p); });
+                        }
+                        if (data.posts?.length) {
+                            data.posts.forEach(p => { html += renderItem(p); });
+                        }
+                        
+                        navSearchResults.innerHTML = html;
+                    })
+                    .catch(err => console.error('Search error:', err));
+            }, 300);
+        });
+        
+        // Hide when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!navSearchInput.contains(e.target) && !navSearchResults.contains(e.target)) {
+                navSearchResults.classList.remove('active');
+            }
+        });
+        
+        // Show again when focused if there's text
+        navSearchInput.addEventListener('focus', () => {
+            if (navSearchInput.value.trim().length > 0 && navSearchResults.innerHTML !== '') {
+                navSearchResults.classList.add('active');
+            }
+        });
     }
 
 });

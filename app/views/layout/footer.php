@@ -2,7 +2,7 @@
     <div id="chat-widget">
         <div class="chat-box" id="chat-box">
             <div class="chat-header">
-                <span>💬 <?php echo $t['chat_title']; ?></span>
+                <span><?php echo $t['chat_title']; ?></span>
                 <button class="chat-close" id="chat-close" aria-label="Close chat">×</button>
             </div>
             <div class="chat-messages" id="chat-messages">

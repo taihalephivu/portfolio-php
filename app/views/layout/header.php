@@ -35,6 +35,16 @@
 
             <!-- Controls -->
             <div class="nav-controls">
+                <div class="nav-search-wrapper">
+                    <div class="search-box nav-search-box">
+                        <span class="search-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                        </span>
+                        <input type="text" id="nav-search-input" placeholder="<?php echo htmlspecialchars($t['search_ph'] ?? 'Search...'); ?>" autocomplete="off">
+                    </div>
+                    <div id="nav-search-results" class="nav-search-results"></div>
+                </div>
+
                 <!-- Theme toggle -->
                 <button id="theme-toggle" class="control-btn" aria-label="Toggle theme" title="Toggle theme">
                     <svg id="icon-moon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>

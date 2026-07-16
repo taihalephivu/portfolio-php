@@ -22,7 +22,7 @@ return [
     'view_demo'       => 'Xem Demo',
     'view_repo'       => 'Mã nguồn',
     'view_all'        => 'Xem tất cả →',
-    'search_ph'       => 'Tìm kiếm dự án...',
+    'search_ph'       => 'Tìm kiếm...',
     // Blog
     'read_more'       => 'Đọc bài viết',
     'back_to_blog'    => '← Về danh sách bài viết',
