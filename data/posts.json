@@ -1,0 +1,65 @@
+[
+  {
+    "id": 1,
+    "slug": "bat-dau-voi-reactjs-2026",
+    "title": {
+      "vi": "Bắt đầu với ReactJS năm 2026: Hướng dẫn toàn diện",
+      "en": "Getting Started with ReactJS in 2026: A Complete Guide"
+    },
+    "summary": {
+      "vi": "Khám phá cách xây dựng ứng dụng React hiện đại với các hook, context API và best practices mới nhất năm 2026.",
+      "en": "Explore how to build modern React applications with hooks, context API, and the latest best practices in 2026."
+    },
+    "content": {
+      "vi": "<h2>Giới thiệu</h2><p>ReactJS vẫn là một trong những thư viện front-end phổ biến nhất thế giới. Trong bài viết này, chúng ta sẽ khám phá những tính năng mới nhất và best practices để xây dựng ứng dụng React hiện đại.</p><h2>Tại sao chọn React?</h2><p>React mang lại hệ sinh thái phong phú, cộng đồng lớn và khả năng tái sử dụng component cao. Với React 19, nhiều cải tiến về hiệu năng và developer experience đã được thêm vào.</p><h2>Các Hook cơ bản</h2><p>useState, useEffect, useCallback, useMemo là những hook bạn cần nắm vững. Ngoài ra, React 19 giới thiệu use() hook mới cực kỳ mạnh mẽ.</p><h2>Kết luận</h2><p>Học React đòi hỏi sự kiên trì nhưng phần thưởng xứng đáng. Hãy bắt đầu với những project nhỏ và dần dần xây dựng kỹ năng của bạn!</p>",
+      "en": "<h2>Introduction</h2><p>ReactJS remains one of the world's most popular front-end libraries. In this article, we'll explore the latest features and best practices for building modern React applications.</p><h2>Why React?</h2><p>React offers a rich ecosystem, large community, and high component reusability. With React 19, many performance improvements and developer experience enhancements have been added.</p><h2>Core Hooks</h2><p>useState, useEffect, useCallback, useMemo are hooks you need to master. Additionally, React 19 introduces a powerful new use() hook.</p><h2>Conclusion</h2><p>Learning React requires perseverance but the rewards are worth it. Start with small projects and gradually build your skills!</p>"
+    },
+    "date": "2026-07-10",
+    "tags": ["ReactJS", "JavaScript", "Frontend"],
+    "image": "https://images.unsplash.com/photo-1633356122544-f134324a6cee?auto=format&fit=crop&w=600&q=80",
+    "published": true,
+    "author": "Hưng"
+  },
+  {
+    "id": 2,
+    "slug": "css-grid-vs-flexbox",
+    "title": {
+      "vi": "CSS Grid vs Flexbox: Khi nào dùng cái nào?",
+      "en": "CSS Grid vs Flexbox: When to Use Which?"
+    },
+    "summary": {
+      "vi": "Hiểu rõ sự khác biệt giữa CSS Grid và Flexbox để lựa chọn công cụ phù hợp trong mỗi tình huống thiết kế.",
+      "en": "Understand the differences between CSS Grid and Flexbox to choose the right tool for each design situation."
+    },
+    "content": {
+      "vi": "<h2>Tổng quan</h2><p>CSS Grid và Flexbox đều là công cụ layout mạnh mẽ trong CSS hiện đại. Mỗi cái có điểm mạnh riêng và phù hợp với các tình huống khác nhau.</p><h2>Flexbox</h2><p>Flexbox tốt nhất cho layout một chiều – theo hàng hoặc cột. Phù hợp cho navigation bars, button groups, card layouts.</p><h2>CSS Grid</h2><p>Grid tốt nhất cho layout hai chiều. Phù hợp cho page layouts, dashboard grids, complex responsive designs.</p><h2>Kết hợp hai cái</h2><p>Thực tế, bạn sẽ thường dùng cả hai. Grid cho overall page layout, Flexbox cho component-level alignment.</p>",
+      "en": "<h2>Overview</h2><p>CSS Grid and Flexbox are both powerful layout tools in modern CSS. Each has its own strengths and is suited to different situations.</p><h2>Flexbox</h2><p>Flexbox is best for one-dimensional layout – in a row or column. Great for navigation bars, button groups, card layouts.</p><h2>CSS Grid</h2><p>Grid is best for two-dimensional layout. Great for page layouts, dashboard grids, complex responsive designs.</p><h2>Combining Both</h2><p>In practice, you'll often use both. Grid for overall page layout, Flexbox for component-level alignment.</p>"
+    },
+    "date": "2026-06-22",
+    "tags": ["CSS", "Frontend", "Design"],
+    "image": "https://images.unsplash.com/photo-1507721999472-8ed4421c4af2?auto=format&fit=crop&w=600&q=80",
+    "published": true,
+    "author": "Hưng"
+  },
+  {
+    "id": 3,
+    "slug": "php-mvc-pattern-cho-nguoi-moi-bat-dau",
+    "title": {
+      "vi": "PHP MVC Pattern dành cho người mới bắt đầu",
+      "en": "PHP MVC Pattern for Beginners"
+    },
+    "summary": {
+      "vi": "Tìm hiểu mô hình MVC trong PHP từ cơ bản đến thực tế, xây dựng ứng dụng web có cấu trúc rõ ràng và dễ bảo trì.",
+      "en": "Learn the MVC pattern in PHP from basics to practice, building web applications with clear structure and easy maintenance."
+    },
+    "content": {
+      "vi": "<h2>MVC là gì?</h2><p>MVC (Model-View-Controller) là một mẫu thiết kế phần mềm phân tách ứng dụng thành ba phần chính để dễ quản lý và bảo trì.</p><h2>Model</h2><p>Model xử lý dữ liệu và business logic. Trong PHP, đây thường là các class kết nối database hoặc đọc file JSON.</p><h2>View</h2><p>View chịu trách nhiệm hiển thị dữ liệu cho người dùng. Trong PHP, view thường là các file .php chứa HTML.</p><h2>Controller</h2><p>Controller là cầu nối giữa Model và View. Nó nhận request, lấy dữ liệu từ Model và đẩy vào View.</p>",
+      "en": "<h2>What is MVC?</h2><p>MVC (Model-View-Controller) is a software design pattern that separates an application into three main parts for easier management and maintenance.</p><h2>Model</h2><p>Model handles data and business logic. In PHP, these are usually classes connecting to databases or reading JSON files.</p><h2>View</h2><p>View is responsible for displaying data to the user. In PHP, views are usually .php files containing HTML.</p><h2>Controller</h2><p>Controller bridges the Model and View. It receives requests, gets data from the Model, and passes it to the View.</p>"
+    },
+    "date": "2026-05-15",
+    "tags": ["PHP", "MVC", "Backend"],
+    "image": "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?auto=format&fit=crop&w=600&q=80",
+    "published": true,
+    "author": "Hưng"
+  }
+]

@@ -1,0 +1,111 @@
+{
+    "name": "Đoàn Quang Hưng",
+    "name_en": "Doan Quang Hung",
+    "title": {
+        "vi": "Software Engineer & UI\/UX Designer",
+        "en": "Software Engineer & UI\/UX Designer"
+    },
+    "bio": {
+        "vi": "Tôi là Hưng – một lập trình viên đam mê xây dựng những trải nghiệm web sáng tạo, mượt mà và thân thiện với người dùng. Với hơn 2 năm kinh nghiệm, tôi luôn tìm kiếm các giải pháp kỹ thuật tinh tế và thiết kế giao diện đẹp.",
+        "en": "I'm Hung – a passionate developer who loves crafting creative, smooth, and user-friendly web experiences. With 2+ years of experience, I pursue elegant technical solutions and beautiful UI design."
+    },
+    "avatar": "public\/avatar.jpg",
+    "email": "hung82390@gmail.com",
+    "cv_file": "public\/cv\/cv-hung.pdf",
+    "social": {
+        "github": "https:\/\/github.com\/taihalephivu",
+        "linkedin": "https:\/\/www.linkedin.com\/in\/hưng-đoàn-093626217",
+        "facebook": "https:\/\/www.facebook.com\/wannhunt\/",
+        "telegram": "https:\/\/t.me\/hungdev"
+    },
+    "skills": [
+        {
+            "name": "HTML5 \/ CSS3",
+            "level": 92,
+            "icon": "🎨"
+        },
+        {
+            "name": "JavaScript (ES6+)",
+            "level": 88,
+            "icon": "⚡"
+        },
+        {
+            "name": "ReactJS",
+            "level": 82,
+            "icon": "⚛️"
+        },
+        {
+            "name": "VueJS",
+            "level": 75,
+            "icon": "💚"
+        },
+        {
+            "name": "PHP \/ Laravel",
+            "level": 78,
+            "icon": "🐘"
+        },
+        {
+            "name": "UI\/UX Design",
+            "level": 85,
+            "icon": "✏️"
+        },
+        {
+            "name": "Node.js",
+            "level": 70,
+            "icon": "🟢"
+        },
+        {
+            "name": "MySQL \/ MongoDB",
+            "level": 72,
+            "icon": "🗄️"
+        }
+    ],
+    "experiences": {
+        "vi": [
+            {
+                "title": "Lập trình viên Front-end",
+                "company": "Công ty Phần mềm XYZ",
+                "period": "2024 - Hiện tại",
+                "type": "work",
+                "desc": "Chịu trách nhiệm chính xây dựng các module front-end. Tối ưu hóa hiệu năng và cải thiện UX. Làm việc với ReactJS, TypeScript và Figma."
+            },
+            {
+                "title": "Thực tập sinh Front-end",
+                "company": "Công ty Tech VN",
+                "period": "2023 - 2024",
+                "type": "work",
+                "desc": "Tham gia phát triển giao diện người dùng cho hệ thống quản lý nội bộ bằng ReactJS và TailwindCSS."
+            },
+            {
+                "title": "Cử nhân Công nghệ Thông tin",
+                "company": "Đại học Công nghệ Thông tin – ĐHQG TP.HCM",
+                "period": "2019 - 2023",
+                "type": "education",
+                "desc": "Tốt nghiệp loại Giỏi chuyên ngành Kỹ thuật Phần mềm. Tham gia nhiều câu lạc bộ học thuật và giành giải nhì cuộc thi lập trình cấp trường."
+            }
+        ],
+        "en": [
+            {
+                "title": "Front-end Developer",
+                "company": "XYZ Software Inc.",
+                "period": "2024 - Present",
+                "type": "work",
+                "desc": "Mainly responsible for building critical front-end modules. Optimized performance and improved UX. Working with ReactJS, TypeScript and Figma."
+            },
+            {
+                "title": "Front-end Intern",
+                "company": "Tech VN Corp",
+                "period": "2023 - 2024",
+                "type": "work",
+                "desc": "Developed UI for an internal management system using ReactJS and TailwindCSS."
+            },
+            {
+                "title": "Bachelor of Information Technology",
+                "company": "University of Information Technology – VNU-HCM",
+                "period": "2019 - 2023",
+                "type": "education",
+                "desc": "Graduated with Honors in Software Engineering. Participated in academic clubs and won 2nd place in a university-level programming contest."
+            }
+        ]
+    }
+}

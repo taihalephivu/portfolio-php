@@ -1,0 +1,86 @@
+[
+  {
+    "id": 1,
+    "slug": "xay-dung-ecommerce-voi-reactjs",
+    "title": {
+      "vi": "E-Commerce Platform",
+      "en": "E-Commerce Platform"
+    },
+    "category": {
+      "vi": "Web App",
+      "en": "Web App"
+    },
+    "desc": {
+      "vi": "Hệ thống bán hàng trực tuyến đầy đủ tính năng: giỏ hàng, thanh toán và quản lý đơn hàng.",
+      "en": "Full-featured online shopping system with cart, checkout, and order management."
+    },
+    "tags": ["ReactJS", "Node.js", "MongoDB", "Redux"],
+    "image": "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=600&q=80",
+    "demo": "https://demo.example.com/ecommerce",
+    "repo": "https://github.com/hungtech/ecommerce",
+    "featured": true
+  },
+  {
+    "id": 2,
+    "slug": "task-manager-app",
+    "title": {
+      "vi": "Task Manager",
+      "en": "Task Manager"
+    },
+    "category": {
+      "vi": "Năng suất",
+      "en": "Productivity"
+    },
+    "desc": {
+      "vi": "Ứng dụng quản lý công việc hàng ngày với giao diện kéo thả trực quan và nhắc nhở thông minh.",
+      "en": "Daily task management app with an intuitive drag-and-drop UI and smart reminders."
+    },
+    "tags": ["VueJS", "Firebase", "CSS3"],
+    "image": "https://images.unsplash.com/photo-1540350394557-8d14678e7f91?auto=format&fit=crop&w=600&q=80",
+    "demo": "https://demo.example.com/taskmanager",
+    "repo": "https://github.com/hungtech/task-manager",
+    "featured": true
+  },
+  {
+    "id": 3,
+    "slug": "portfolio-personal",
+    "title": {
+      "vi": "Personal Portfolio",
+      "en": "Personal Portfolio"
+    },
+    "category": {
+      "vi": "Website",
+      "en": "Website"
+    },
+    "desc": {
+      "vi": "Trang portfolio cá nhân đa ngôn ngữ, hỗ trợ dark/light mode và tích hợp trang admin quản lý nội dung.",
+      "en": "Multilingual personal portfolio with dark/light mode and integrated content management admin panel."
+    },
+    "tags": ["PHP", "HTML/CSS", "JavaScript", "JSON"],
+    "image": "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=600&q=80",
+    "demo": "https://demo.example.com/portfolio",
+    "repo": "https://github.com/hungtech/portfolio-php",
+    "featured": true
+  },
+  {
+    "id": 4,
+    "slug": "weather-dashboard",
+    "title": {
+      "vi": "Weather Dashboard",
+      "en": "Weather Dashboard"
+    },
+    "category": {
+      "vi": "Dashboard",
+      "en": "Dashboard"
+    },
+    "desc": {
+      "vi": "Dashboard thời tiết thời gian thực với biểu đồ đẹp mắt, hỗ trợ tìm kiếm theo thành phố.",
+      "en": "Real-time weather dashboard with beautiful charts and city search support."
+    },
+    "tags": ["ReactJS", "Chart.js", "OpenWeather API"],
+    "image": "https://images.unsplash.com/photo-1504608524841-42584120d693?auto=format&fit=crop&w=600&q=80",
+    "demo": "https://demo.example.com/weather",
+    "repo": "https://github.com/hungtech/weather-app",
+    "featured": false
+  }
+]
