@@ -4,7 +4,6 @@
     <div class="container" style="padding-bottom: 80px;">
 
         <div class="section-header reveal" style="margin-bottom: 50px; text-align: center;">
-            <div class="section-tag">Blog</div>
             <h1 class="section-title"><?php echo $t['blog_title']; ?></h1>
         </div>
 

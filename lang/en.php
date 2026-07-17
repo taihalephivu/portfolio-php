@@ -25,10 +25,9 @@ return [
     'search_ph'       => 'Search...',
     // Blog
     'read_more'       => 'Read Article',
-    'back_to_blog'    => '← Back to Blog',
+    'back_to_blog'    => 'Back to Blog',
     'published_on'    => 'Published on',
     // CV
-    'cv_title'        => 'CV Online',
     'cv_download'     => '⬇ Download CV (PDF)',
     'cv_work'         => 'Work Experience',
     'cv_edu'          => 'Education',
@@ -62,5 +61,5 @@ return [
     // 404
     '404_title'       => 'Page Not Found',
     '404_desc'        => 'The page you\'re looking for doesn\'t exist or has been removed.',
-    '404_back'        => '← Back to Home',
+    '404_back'        => 'Back to Home',
 ];

@@ -25,10 +25,9 @@ return [
     'search_ph'       => 'Tìm kiếm...',
     // Blog
     'read_more'       => 'Đọc bài viết',
-    'back_to_blog'    => '← Về danh sách bài viết',
+    'back_to_blog'    => 'Về danh sách bài viết',
     'published_on'    => 'Đăng ngày',
     // CV
-    'cv_title'        => 'CV Online',
     'cv_download'     => '⬇ Tải CV (PDF)',
     'cv_work'         => 'Kinh nghiệm làm việc',
     'cv_edu'          => 'Học tập',
@@ -62,5 +61,5 @@ return [
     // 404
     '404_title'       => 'Trang không tồn tại',
     '404_desc'        => 'Trang bạn tìm kiếm không tồn tại hoặc đã bị xóa.',
-    '404_back'        => '← Về trang chủ',
+    '404_back'        => 'Về trang chủ',
 ];

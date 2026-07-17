@@ -15,7 +15,7 @@ class AdminController extends BaseController
                 $this->redirect('admin');
             } else {
                 $error = $this->lang === 'vi'
-                    ? 'Tên đăng nhập hoặc mật khẩu không đúng.'
+                    ? 'Tên hoặc mật khẩu không đúng.'
                     : 'Invalid username or password.';
             }
         }

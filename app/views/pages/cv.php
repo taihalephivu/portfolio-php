@@ -8,7 +8,6 @@ $experiences = $profile['experiences'][$l] ?? [];
 
         <!-- CV Header -->
         <div class="cv-header reveal">
-            <div class="section-tag"><?php echo $t['cv_title']; ?></div>
             <h1 class="section-title"><?php echo htmlspecialchars($l === 'vi' ? $profile['name'] : $profile['name_en']); ?></h1>
             <p style="color: var(--text-2); font-size: 1.1rem; margin: 10px 0 20px;">
                 <?php echo htmlspecialchars($profile['title'][$l] ?? ''); ?>
