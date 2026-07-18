@@ -12,13 +12,24 @@ class BaseController
     {
         $this->lang = $lang;
         $this->t    = require __DIR__ . '/../../lang/' . $lang . '.php';
-        // Base URL for assets/links
-        $this->base = rtrim(dirname($_SERVER['SCRIPT_NAME']), '/');
+        // Base URL for assets/links – uses centralized BASE_PATH constant
+        $this->base = defined('BASE_PATH') ? BASE_PATH : rtrim(dirname($_SERVER['SCRIPT_NAME']), '/');
     }
 
     protected function url(string $path = ''): string
     {
         return $this->base . '/' . ltrim($path, '/');
+    }
+
+    /**
+     * Generate asset URL with cache-busting query string.
+     * Usage: $this->asset('public/css/style.css')
+     */
+    protected function asset(string $path): string
+    {
+        $fullPath = __DIR__ . '/../../' . ltrim($path, '/');
+        $version  = file_exists($fullPath) ? filemtime($fullPath) : time();
+        return $this->base . '/' . ltrim($path, '/') . '?v=' . $version;
     }
 
     protected function render(string $view, array $data = []): void
@@ -33,6 +44,7 @@ class BaseController
         }
         require $path;
     }
+
 
     protected function json(mixed $data, int $status = 200): void
     {

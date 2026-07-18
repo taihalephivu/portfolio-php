@@ -24,8 +24,8 @@ class Auth
     public static function requireLogin(): void
     {
         if (!self::isLoggedIn()) {
-            $base = dirname($_SERVER['SCRIPT_NAME']);
-            header('Location: ' . rtrim($base, '/') . '/admin/login');
+            $base = defined('BASE_PATH') ? BASE_PATH : rtrim(dirname($_SERVER['SCRIPT_NAME']), '/');
+            header('Location: ' . $base . '/admin/login');
             exit;
         }
     }

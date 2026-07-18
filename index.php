@@ -4,6 +4,18 @@
  * Routes: /, /blog, /blog/{slug}, /cv, /admin, /admin/*, /api/*
  */
 
+// ─── Subfolder-safe Base Path ────────────────────────────────────────────────
+// Detect the subfolder path dynamically (works for any folder name)
+$scriptDir = rtrim(dirname($_SERVER['SCRIPT_NAME']), '/');
+define('BASE_PATH', $scriptDir);
+
+// ─── Session with Cookie Path Isolation ──────────────────────────────────────
+// Each subfolder gets its own session scope → no cookie conflicts between webs
+session_set_cookie_params([
+    'path'     => BASE_PATH . '/',
+    'httponly'  => true,
+    'samesite'  => 'Lax',
+]);
 session_start();
 
 // ─── Autoload ────────────────────────────────────────────────────────────────
@@ -20,9 +32,8 @@ $requestUri = $_SERVER['REQUEST_URI'] ?? '/';
 // Strip query string
 $path = parse_url($requestUri, PHP_URL_PATH);
 // Strip base path (e.g. /portfolio-php) – XAMPP sub-folder support
-$scriptDir = rtrim(dirname($_SERVER['SCRIPT_NAME']), '/');
-if ($scriptDir !== '' && str_starts_with($path, $scriptDir)) {
-    $path = substr($path, strlen($scriptDir));
+if (BASE_PATH !== '' && str_starts_with($path, BASE_PATH)) {
+    $path = substr($path, strlen(BASE_PATH));
 }
 $path = '/' . ltrim($path, '/');
 $path = rtrim($path, '/') ?: '/';

@@ -49,17 +49,28 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // ─────────────────────────────────────────────────────────────────────────
-    // 3. NAVBAR: scroll shadow + active link highlight
+    // 3. NAVBAR: scroll shadow + active link highlight + Back to Top
     // ─────────────────────────────────────────────────────────────────────────
     const navbar = document.getElementById('navbar');
+    const backToTop = document.getElementById('back-to-top');
+
     window.addEventListener('scroll', () => {
         if (navbar) {
             navbar.style.boxShadow = window.scrollY > 20
                 ? '0 4px 20px rgba(0,0,0,0.15)'
                 : 'none';
         }
+        // Show/hide back-to-top button
+        if (backToTop) {
+            backToTop.classList.toggle('visible', window.scrollY > 300);
+        }
         highlightNavLink();
     }, { passive: true });
+
+    // Back to top – smooth scroll
+    backToTop?.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
 
     function highlightNavLink() {
         const isHome = document.getElementById('hero') !== null;
@@ -302,7 +313,9 @@ document.addEventListener('DOMContentLoaded', () => {
                             else if (item.type === 'experience') typeLabel = 'Kinh nghiệm';
                             
                             let url = item.url;
-                            if (url.startsWith('/')) {
+                            // API already returns subfolder-aware URLs
+                            // Only prepend base for URLs starting with / that don't already include it
+                            if (url.startsWith('/') && !url.startsWith(_baseUrl)) {
                                 url = _baseUrl + url;
                             }
 

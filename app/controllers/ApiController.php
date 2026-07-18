@@ -98,7 +98,7 @@ class ApiController extends BaseController
             if ($match) {
                 $matchedPosts[] = [
                     'title' => $p['title'][$this->lang] ?? '',
-                    'url' => '/blog/' . ($p['slug'] ?? ''),
+                    'url' => $this->url('blog/' . ($p['slug'] ?? '')),
                     'type' => 'post'
                 ];
             }
@@ -110,10 +110,10 @@ class ApiController extends BaseController
         
         // Static sections
         $sections = [
-            'Liên hệ' => ['keywords' => ['liên hệ', 'contact', 'email', 'social'], 'url' => '/#contact'],
-            'Giới thiệu' => ['keywords' => ['giới thiệu', 'about', 'profile', 'bio', 'tiểu sử'], 'url' => '/#about'],
-            'Kỹ năng' => ['keywords' => ['kỹ năng', 'skill', 'skills', 'công nghệ'], 'url' => '/#skills'],
-            'Kinh nghiệm' => ['keywords' => ['kinh nghiệm', 'experience', 'làm việc', 'học tập'], 'url' => '/#experience']
+            'Liên hệ' => ['keywords' => ['liên hệ', 'contact', 'email', 'social'], 'url' => $this->url('#contact')],
+            'Giới thiệu' => ['keywords' => ['giới thiệu', 'about', 'profile', 'bio', 'tiểu sử'], 'url' => $this->url('#about')],
+            'Kỹ năng' => ['keywords' => ['kỹ năng', 'skill', 'skills', 'công nghệ'], 'url' => $this->url('#skills')],
+            'Kinh nghiệm' => ['keywords' => ['kinh nghiệm', 'experience', 'làm việc', 'học tập'], 'url' => $this->url('#experience')]
         ];
         foreach ($sections as $name => $sec) {
             foreach ($sec['keywords'] as $kw) {
@@ -134,7 +134,7 @@ class ApiController extends BaseController
                 if (str_contains(mb_strtolower($skill['name'], 'UTF-8'), $qLower)) {
                     $matchedOthers[] = [
                         'title' => $skill['name'],
-                        'url' => '/#skills',
+                        'url' => $this->url('#skills'),
                         'type' => 'skill'
                     ];
                 }
@@ -151,7 +151,7 @@ class ApiController extends BaseController
             if (str_contains($title, $qLower) || str_contains($company, $qLower) || str_contains($desc, $qLower)) {
                 $matchedOthers[] = [
                     'title' => ($exp['title'] ?? '') . ' - ' . ($exp['company'] ?? ''),
-                    'url' => '/#experience',
+                    'url' => $this->url('#experience'),
                     'type' => 'experience'
                 ];
             }

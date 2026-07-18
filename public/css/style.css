@@ -867,6 +867,43 @@ section { padding: 100px 0; scroll-margin-top: 70px; }
 /* ============================================================
    CHAT WIDGET
    ============================================================ */
+/* ─── BACK TO TOP ────────────────────────────────────────────────────────── */
+.back-to-top {
+    position: fixed;
+    bottom: 32px;
+    left: 32px;
+    z-index: 899;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 1.5px solid var(--border);
+    background: var(--surface);
+    color: var(--text-2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: opacity 0.35s ease, visibility 0.35s ease, transform 0.35s ease,
+                background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+.back-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+.back-to-top:hover {
+    background: var(--grad);
+    color: var(--bg);
+    border-color: transparent;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(99, 102, 241, 0.3);
+}
+
 #chat-widget {
     position: fixed;
     bottom: 28px;
@@ -935,8 +972,8 @@ section { padding: 100px 0; scroll-margin-top: 70px; }
     gap: 4px;
     max-width: 85%;
 }
-.chat-msg.admin { align-self: flex-end; align-items: flex-end; }
-.chat-msg.visitor { align-self: flex-start; }
+.chat-msg.admin { align-self: flex-start; }
+.chat-msg.visitor { align-self: flex-end; align-items: flex-end; }
 
 .chat-bubble {
     padding: 10px 14px;
@@ -944,8 +981,8 @@ section { padding: 100px 0; scroll-margin-top: 70px; }
     font-size: 0.88rem;
     line-height: 1.5;
 }
-.admin .chat-bubble { background: var(--grad); color: var(--bg); border-bottom-right-radius: 4px; }
-.visitor .chat-bubble { background: var(--surface-2); color: var(--text); border-bottom-left-radius: 4px; border: 1px solid var(--border); }
+.admin .chat-bubble { background: var(--surface-2); color: var(--text); border-bottom-left-radius: 4px; border: 1px solid var(--border); }
+.visitor .chat-bubble { background: var(--grad); color: var(--bg); border-bottom-right-radius: 4px; }
 .chat-msg-name { font-size: 0.72rem; color: var(--text-3); }
 
 .chat-footer { padding: 14px; border-top: 1px solid var(--border); display: flex; flex-direction: column; gap: 8px; }

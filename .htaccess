@@ -1,10 +1,11 @@
 Options -Indexes
 RewriteEngine On
-RewriteBase /portfolio-php/
 
-# Serve existing files/dirs directly
+# ─── Dynamic RewriteBase ──────────────────────────────────────────────────────
+# Auto-detect subfolder path so this works in ANY directory name
+# No need to hardcode /portfolio-php/ anymore
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 
-# Route everything to index.php
+# Route everything to index.php (relative path = auto subfolder support)
 RewriteRule ^ index.php [QSA,L]
