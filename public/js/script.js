@@ -344,9 +344,11 @@ document.addEventListener('DOMContentLoaded', () => {
             }, 300);
         });
         
-        // Hide when clicking outside
+        // Hide when clicking outside or clicking on a result
         document.addEventListener('click', (e) => {
             if (!navSearchInput.contains(e.target) && !navSearchResults.contains(e.target)) {
+                navSearchResults.classList.remove('active');
+            } else if (e.target.closest('.search-result-item')) {
                 navSearchResults.classList.remove('active');
             }
         });

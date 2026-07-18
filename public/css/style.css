@@ -159,10 +159,10 @@ section { padding: 100px 0; scroll-margin-top: 70px; }
     right: 0;
     margin-top: 8px;
     width: 250px;
-    background: var(--card-bg);
+    background: var(--surface);
     border: 1px solid var(--border);
     border-radius: 8px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    box-shadow: var(--shadow-lg);
     z-index: 1000;
     max-height: 350px;
     overflow-y: auto;
