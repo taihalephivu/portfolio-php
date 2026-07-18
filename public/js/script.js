@@ -318,11 +318,6 @@ document.addEventListener('DOMContentLoaded', () => {
                             else if (item.type === 'experience') typeLabel = 'Kinh nghiệm';
                             
                             let url = item.url;
-                            // API already returns subfolder-aware URLs
-                            // Only prepend base for URLs starting with / that don't already include it
-                            if (url.startsWith('/') && !url.startsWith(_baseUrl)) {
-                                url = _baseUrl + url;
-                            }
 
                             return `
                             <a href="${url}" class="search-result-item">
