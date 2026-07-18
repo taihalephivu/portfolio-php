@@ -53,6 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // ─────────────────────────────────────────────────────────────────────────
     const navbar = document.getElementById('navbar');
     const backToTop = document.getElementById('back-to-top');
+    const chatWidget = document.getElementById('chat-widget');
 
     window.addEventListener('scroll', () => {
         if (navbar) {
@@ -60,9 +61,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 ? '0 4px 20px rgba(0,0,0,0.15)'
                 : 'none';
         }
-        // Show/hide back-to-top button
+        // Show/hide back-to-top button and shift chat widget
         if (backToTop) {
-            backToTop.classList.toggle('visible', window.scrollY > 300);
+            const isScrolled = window.scrollY > 300;
+            backToTop.classList.toggle('visible', isScrolled);
+            if (chatWidget) {
+                chatWidget.classList.toggle('shifted-up', isScrolled);
+            }
         }
         highlightNavLink();
     }, { passive: true });
