@@ -1,6 +1,9 @@
 Options -Indexes
 RewriteEngine On
 
+# ─── Chặn truy cập trực tiếp vào thư mục data/ ──────────────────────────────
+RewriteRule ^data/ index.php [L]
+
 # ─── Dynamic RewriteBase ──────────────────────────────────────────────────────
 # Auto-detect subfolder path so this works in ANY directory name
 # No need to hardcode /portfolio-php/ anymore
